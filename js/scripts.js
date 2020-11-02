@@ -80,7 +80,7 @@ function allowlogin(usermail) {
                 });
 
             alert("Logged in user id :" + b);
-            window.location = "https://dileepnalla.github.io/Basic_html/Index.HTML";
+            window.location = "https://sayarwarvamsikrishna.github.io/PSPX/Index.HTML";
 
         }
         else
