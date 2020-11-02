@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+   <link rel="stylesheet" type ="text/css" href="css/Style.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script type="text/javascript" src="js/scripts.js"></script> 
+    
+</head>
+<body id="Payment-body">
+<div class="container">
+  <header class="header">
+      <a class="Link-title" href="./Index.HTML">Website Page</a>
+    </header>
+    
+    <nav class="menu">
+    
+      <a href="./Index.HTML">Home</a> &nbsp;&nbsp;&nbsp;
+      <a href="./About.HTML">About Us</a>&nbsp;&nbsp;&nbsp;
+      <a href="./Contact.HTML">Contact</a> &nbsp;&nbsp;&nbsp;
+      <a href="./Widget.html">Widget</a> &nbsp;&nbsp;&nbsp;
+      <a href="./Payment.html">Payment</a> &nbsp;&nbsp;&nbsp;
+      <a href="./dataloader.html">DataLoader</a> &nbsp;&nbsp;&nbsp;
+      <a href="./Login.HTML" onclick="deleteAllCookies()">Logout</a>
+    </nav>
+
+     <!-- Bootstrap CSS CDN https://getbootstrap.com/ -->
+
+<body>
+    <div><p><b>Custom Events</b></p></div>
+ <main>  
+<span id="paymentbutton"></span>
+
+<div>
+  <span>
+  <input type="button" class="btn btn-primary" id="KCBbot" value="KC Bot 1" onclick="showKCB1()"></li>
+</span>
+<span>
+  <input type="button" class="btn btn-warning" id="apiKCBOT" value="KC Bot 2" onclick="showKCB2()"></li>
+</span>
+</div>
+
+
+<div>
+  <br>
+  <input type="button" id="SessionButton" value="Click Capture only for session" onclick="captureonlyforsession()">
+</div>
+
+
+</main>
+<article class="main">   
+   
+    <footer>
+     &copy; 2019 Miminal Website  &nbsp;<span class="seperator">|</span> Design by Dileep Nalla <a href="http://www.NLIT.com">NLIT</a>
+    </footer>
+    
+    </article>
+</body>
+<!-- <script src="Pay_script.js"></script> -->
+</html>

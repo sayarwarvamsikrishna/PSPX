@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+   <link rel="stylesheet" type ="text/css" href="css/Style.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script type="text/javascript" src="js/scripts.js"></script> 
+  <script>
+    
+    function getuserdata(){
+    var userid = document.getElementById("useridentify").value;
+    var myHeaders = new Headers();
+    myHeaders.append("X-Requested-With", "XMLHttpRequest");
+    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("X-APTRINSIC-API-KEY", "1f3046e3-12e1-4c2b-9d2f-335e2cad66e9");
+ 
+     var requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    };
+    
+    fetch("https://app-be.aptrinsic.com/v1/users/"+userid, requestOptions)
+      .then(response => response.text())
+      .then(result => document.getElementById('printhere').innerHTML += result + '<br>')
+      .catch(error => document.getElementById('printhere').innerHTML += result + '<br>');
+        }
+
+
+    function deleteuserdata()
+    {
+      var userid = document.getElementById("useridentify").value;
+      var myHeaders = new Headers();
+      myHeaders.append("X-Requested-With", "XMLHttpRequest");
+      myHeaders.append("Content-Type", "application/json");
+      myHeaders.append("X-APTRINSIC-API-KEY", "1f3046e3-12e1-4c2b-9d2f-335e2cad66e9");
+
+      var raw = "";
+
+      var requestOptions = {
+        method: 'DELETE',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      };
+
+      fetch("https://app-be.aptrinsic.com/v1/users/"+ userid, requestOptions)
+        .then(response => response.text())
+        .then(result => document.getElementById('printhere').innerHTML += result + '<br>')
+        .catch(error => document.getElementById('printhere').innerHTML += result + '<br>');
+    }
+
+
+    function updateuserdata()
+    {
+      alert('Work In Progress'+'Try fetch and Delete');
+    }
+      </script>
+</head>
+
+<body id="loader-page">
+<div class="container">
+  <header class="header">
+      <a class="Link-title" href="./Index.HTML">Website Page</a>
+    </header>
+    
+    <nav class="menu">
+      <a href="./Index.HTML">Home</a> &nbsp;&nbsp;&nbsp;
+      <a href="./About.HTML">About Us</a>&nbsp;&nbsp;&nbsp;
+      <a href="./Contact.HTML">Contact</a> &nbsp;&nbsp;&nbsp;
+      <a href="./Widget.html">Widget</a> &nbsp;&nbsp;&nbsp;
+      <a href="./Payment.html">Payment</a> &nbsp;&nbsp;&nbsp;
+      <a href="./Upload.html">DataLoader</a> &nbsp;&nbsp;&nbsp;
+      <a href="./Login.HTML" onclick="deleteAllCookies()">Logout</a>
+    </nav> 
+
+<div>
+  <br>
+  <span><label for="User ID" >User ID:</label></span>
+  <span><input type="text" id="useridentify" name="Enter the User Id" placeholder="Enter User ID"></span>
+  <br>
+</div>
+
+<div>
+  <table cellspacing="0" rules="all" border="1" id="tableReports" style="width: 1000px; border-collapse: collapse;">
+    <tbody></tbody>
+</table>
+<span><p id="printhere">Display Message</p></span>
+
+</div>
+
+<div>
+  <br>
+  <span><input type="button" id="GET button" value="Fetch" onclick= getuserdata()></span>
+  <span><input type="button" id="GET button" value="Update" onclick= updateuserdata() ></span>
+  <span><input type="button" id="GET button" value="Delete" onclick= deleteuserdata()></span>
+  <br>
+</div>
+<br>
+    <footer>
+     &copy; 2019 Miminal Website  &nbsp;<span class="seperator">|</span> Design by Dileep Nalla <a href="http://www.NLIT.com">NLIT</a>
+    </footer>
+    
+    </article>
+</body>
+
+</html>

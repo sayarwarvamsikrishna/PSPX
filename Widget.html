@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type ="text/css" href="css/Style.css">
+  <script type="text/javascript" src="js/scripts.js"></script> 
+    <style>
+      #draggreen { width: 150px; height: 150px; padding: 0.5em; }
+      #dragred { width: 150px; height: 150px; padding: 0.5em; }
+      #dragpink { width: 150px; height: 150px; padding: 0.5em; }
+      </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body id="about-page">
+<div class="container">
+  <header class="header">
+    <a class="Link-title" href="./Index.HTML">Website Page</a>
+  </header>
+  
+  <nav class="menu">
+  
+    <a href="./Index.HTML">Home</a> &nbsp;&nbsp;&nbsp;
+    <a href="./About.HTML">About Us</a>&nbsp;&nbsp;&nbsp;
+    <a href="./Contact.HTML">Contact</a> &nbsp;&nbsp;&nbsp;
+    <a href="./Widget.html">Widget</a> &nbsp;&nbsp;&nbsp;
+    <a href="./Payment.html">Payment</a> &nbsp;&nbsp;&nbsp;
+    <a href="./dataloader.html">DataLoader</a> &nbsp;&nbsp;&nbsp;
+    <a href="./Login.HTML" onclick="deleteAllCookies()">Logout</a>
+  </nav>
+  <script>
+
+    $( function() {
+        $( "#dragred").draggable({
+            stop : function r() {aptrinsic('track','dragred',{"name":"red drag", "count" : 30});}
+            
+        })
+      } );
+    
+    $( function() {
+        $( "#draggreen").draggable({
+            stop : function b() {aptrinsic('track','draggreen',{"name":"drag green name", "count" : 60});}
+            
+        })
+      } );
+    
+      $( function() {
+        $( "#dragpink").draggable({
+            stop : function b() {aptrinsic('track','dragpink',{"Name":"drag Pink name","demo":"yes" ,"count" : 60,"name":"testing"});}
+            
+        })
+      } );
+    
+      </script>
+</head>
+<body>
+<div>
+    <div id="draggreen" class="ui-widget-content" style="background-color: green;">
+    <p>Drag me around - Green</p>
+</div>
+<div id="dragred" class="ui-widget-content" style="background-color: red;">
+    <p>Drag me around  - Red</p>
+  </div>
+</div>
+<div id="dragpink" class="ui-widget-content" style="background-color: pink;">
+    <p>Drag me around - Pink</p>
+  </div>
+</div>
+
+</body>
+</html>
