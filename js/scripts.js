@@ -59,7 +59,7 @@ function allowlogin(usermail) {
     if (a != "") {
         if (a == "vamshiahead@gmail.com" || a == "vamshikrishnas007@gmail.com" || a == "vsayarwar@gainsight.com" || a == "demouser@gmail.com") {
             alert("valid User");
-            b = a.substr(11, 6);
+            b = a.substr(8, 5);
             var id = b;
             // var hash = CryptoJS.HmacSHA256(id, "9rmLVS939teSt3cILUccAPiqBBxSsQNmREc8CwpAj");
 
@@ -84,10 +84,10 @@ function allowlogin(usermail) {
 
         }
         else
-            alert("Invalid User,enter \"vamshiahead@gmail.com\"");
+            alert("Invalid User,enter \"demouser@gmail.com\"");
     }
     else
-        alert("enter \"vamshiahead@gmail.com\"");
+        alert("enter \"demouser@gmail.com\"");
 
 
     return b;
