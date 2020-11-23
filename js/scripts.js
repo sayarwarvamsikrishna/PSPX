@@ -68,7 +68,7 @@ function allowlogin(usermail) {
                 {
                     //User Fields
                     "id": id, // Required for logged in app users
-                    "email": a,
+                    //"email": a,
                     // "userHash": hash.toString()// optional transient for HMAC identification
                 },
 
@@ -84,10 +84,10 @@ function allowlogin(usermail) {
 
         }
         else
-            alert("Invalid User,enter \"demouser@gmail.com\"");
+            alert("Invalid User,enter \"vamshikrishnas007@gmail.com\"");
     }
     else
-        alert("enter \"demouser@gmail.com\"");
+        alert("enter \"vamshikrishnas007@gmail.com\"");
 
 
     return b;
